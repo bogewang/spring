@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springmvcdemo" />
+        <module name="springRedis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring" target="1.5" />
       <module name="springmvcdemo" target="1.7" />
+      <module name="springRedis" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
