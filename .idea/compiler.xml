@@ -9,10 +9,12 @@
         <module name="springmvcdemo" />
         <module name="springRedisDemo2" />
         <module name="springRedis" />
+        <module name="spring-data-elasticsearch-sample-application" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring" target="1.5" />
+      <module name="spring-data-elasticsearch-sample-application" target="1.5" />
       <module name="springmvcdemo" target="1.7" />
       <module name="springRedis" target="1.6" />
       <module name="springRedisDemo2" target="1.5" />
