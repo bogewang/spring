@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring_data_jpa" />
         <module name="spring-data-elasticsearch-sample-application" />
+        <module name="spring_data_redis" />
         <module name="springRedis" />
         <module name="spring_data_transaction" />
         <module name="springRedisDemo2" />
@@ -23,6 +24,7 @@
       <module name="spring_cache" target="1.8" />
       <module name="spring_data_jpa" target="1.8" />
       <module name="spring_data_mongodb" target="1.8" />
+      <module name="spring_data_redis" target="1.8" />
       <module name="spring_data_rest" target="1.8" />
       <module name="spring_data_transaction" target="1.8" />
       <module name="springmvcdemo" target="1.7" />
@@ -35,6 +37,7 @@
       <module name="spring_cache" options="-parameters" />
       <module name="spring_data_jpa" options="-parameters" />
       <module name="spring_data_mongodb" options="-parameters" />
+      <module name="spring_data_redis" options="-parameters" />
       <module name="spring_data_rest" options="-parameters" />
       <module name="spring_data_transaction" options="-parameters" />
     </option>

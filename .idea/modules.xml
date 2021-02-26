@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring_cache/spring_cache.iml" filepath="$PROJECT_DIR$/spring_cache/spring_cache.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_data_jpa/spring_data_jpa.iml" filepath="$PROJECT_DIR$/spring_data_jpa/spring_data_jpa.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_data_mongodb/spring_data_mongodb.iml" filepath="$PROJECT_DIR$/spring_data_mongodb/spring_data_mongodb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_data_redis/spring_data_redis.iml" filepath="$PROJECT_DIR$/spring_data_redis/spring_data_redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_data_rest/spring_data_rest.iml" filepath="$PROJECT_DIR$/spring_data_rest/spring_data_rest.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_data_transaction/spring_data_transaction.iml" filepath="$PROJECT_DIR$/spring_data_transaction/spring_data_transaction.iml" />
       <module fileurl="file://$PROJECT_DIR$/springmvcdemo/springmvcdemo.iml" filepath="$PROJECT_DIR$/springmvcdemo/springmvcdemo.iml" />
