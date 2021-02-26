@@ -6,16 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-data-elasticsearch-sample-application" />
+        <module name="springRedis" />
+        <module name="springRedisDemo2" />
         <module name="springmvcdemo" />
         <module name="spring_data_mongodb" />
-        <module name="springRedisDemo2" />
-        <module name="springRedis" />
-        <module name="spring-data-elasticsearch-sample-application" />
+        <module name="spring_cache" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring" target="1.5" />
       <module name="spring-data-elasticsearch-sample-application" target="1.5" />
+      <module name="spring_cache" target="1.8" />
       <module name="spring_data_mongodb" target="1.8" />
       <module name="springmvcdemo" target="1.7" />
       <module name="springRedis" target="1.6" />
@@ -24,6 +26,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring_cache" options="-parameters" />
       <module name="spring_data_mongodb" options="-parameters" />
     </option>
   </component>
