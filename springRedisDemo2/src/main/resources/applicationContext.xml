@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:redis.properties" />
+
+    <!--srping component 组件扫描的祖父包，其下的所有子包都会自动扫描-->
+    <!--@Repository dao-->
+    <!--@Service service-->
+    <!--@Controller action-->
+    <!--@Compontent 其它层，上面三层都是继承自component组件-->
+    <context:component-scan base-package="cn.bogewang.redisSpring" annotation-config="true" />
+
+    <!--初始化配置redisPool连接-->
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxTotal" value="${redis.maxTotal}"></property>
+        <property name="maxIdle" value="${redis.maxIdle}"></property>
+        <property name="minIdle" value="${redis.minIdle}"></property>
+        <property name="maxWaitMillis" value="${redis.maxWaitMillis}"></property>
+        <property name="minEvictableIdleTimeMillis" value="${redis.minEvictableIdleTimeMillis}"></property>
+        <property name="numTestsPerEvictionRun" value="${redis.numTestsPerEvuctionRun}"></property>
+        <property name="timeBetweenEvictionRunsMillis" value="${redis.timeBetweenEvictionRunsMillis}"></property>
+        <property name="testOnBorrow" value="${redis.testOnBorrow}"></property>
+        <property name="testOnReturn" value="${redis.testOnReturn}"></property>
+        <property name="testWhileIdle" value="${redis.testWhileIdle}"></property>
+    </bean>
+
+    <!--配置连接工厂-->
+    <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+          destroy-method="destroy">
+        <property name="hostName" value="${redis.hostname}" />
+        <property name="port" value="${redis.port}" />
+        <property name="timeout" value="${redis.timeout}" />
+        <property name="database" value="${redis.database}" />
+        <property name="password" value="${redis.password}" />
+        <property name="usePool" value="${redis.usePool}" />
+        <property name="poolConfig" ref="jedisPoolConfig" />
+    </bean>
+
+    <!-- redis template definition p表示对该bean里面的属性进行注入，
+    格式为p:属性名=注入的对象 效果与在bean里面使用<property>标签一样 -->
+    <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate" p:connectionFactory-ref="jedisConnectionFactory">
+        <!--序列化方式 建议key/hashkey 采用StringRedisSerializer-->
+        <property name="keySerializer" >
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+        </property>
+        <property name="hashKeySerializer">
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+        </property>
+        <property name="valueSerializer">
+            <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"/>
+        </property>
+        <property name="hashValueSerializer">
+            <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />
+        </property>
+    </bean>
+
+    <!--对String操作的封装-->
+    <bean id="stringRedisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate" p:connectionFactory-ref="jedisConnectionFactory" />
+    <bean id="orderDao" class="cn.bogewang.redisSpring.dao.impl.OrderDaoImpl"/>
+</beans>
