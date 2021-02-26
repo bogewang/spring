@@ -16,6 +16,7 @@
         <module>spring_data_mongodb</module>
         <module>spring_cache</module>
         <module>spring_data_transaction</module>
+        <module>spring_data_rest</module>
     </modules>
 
 
