@@ -13,6 +13,7 @@
         <module>springRedis</module>
         <module>springRedisDemo2</module>
         <module>spring-data-elasticsearch-sample-application</module>
+        <module>spring_data_mongodb</module>
     </modules>
 
 

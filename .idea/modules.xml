@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/springMvc_restful/springMvc_restful.iml" filepath="$PROJECT_DIR$/springMvc_restful/springMvc_restful.iml" />
       <module fileurl="file://$PROJECT_DIR$/springRedis/springRedis.iml" filepath="$PROJECT_DIR$/springRedis/springRedis.iml" />
       <module fileurl="file://$PROJECT_DIR$/springRedisDemo2/springRedisDemo2.iml" filepath="$PROJECT_DIR$/springRedisDemo2/springRedisDemo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_data_mongodb/spring_data_mongodb.iml" filepath="$PROJECT_DIR$/spring_data_mongodb/spring_data_mongodb.iml" />
       <module fileurl="file://$PROJECT_DIR$/springmvcdemo/springmvcdemo.iml" filepath="$PROJECT_DIR$/springmvcdemo/springmvcdemo.iml" />
     </modules>
   </component>
