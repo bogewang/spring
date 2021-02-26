@@ -17,6 +17,7 @@
         <module>spring_cache</module>
         <module>spring_data_transaction</module>
         <module>spring_data_rest</module>
+        <module>spring_data_jpa</module>
     </modules>
 
 

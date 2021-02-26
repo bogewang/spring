@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring_data_jpa" />
         <module name="spring-data-elasticsearch-sample-application" />
         <module name="springRedis" />
         <module name="spring_data_transaction" />
@@ -20,6 +21,7 @@
       <module name="spring" target="1.5" />
       <module name="spring-data-elasticsearch-sample-application" target="1.5" />
       <module name="spring_cache" target="1.8" />
+      <module name="spring_data_jpa" target="1.8" />
       <module name="spring_data_mongodb" target="1.8" />
       <module name="spring_data_rest" target="1.8" />
       <module name="spring_data_transaction" target="1.8" />
@@ -31,6 +33,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="spring_cache" options="-parameters" />
+      <module name="spring_data_jpa" options="-parameters" />
       <module name="spring_data_mongodb" options="-parameters" />
       <module name="spring_data_rest" options="-parameters" />
       <module name="spring_data_transaction" options="-parameters" />
