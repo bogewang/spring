@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/springRedisDemo2/springRedisDemo2.iml" filepath="$PROJECT_DIR$/springRedisDemo2/springRedisDemo2.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_cache/spring_cache.iml" filepath="$PROJECT_DIR$/spring_cache/spring_cache.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_data_mongodb/spring_data_mongodb.iml" filepath="$PROJECT_DIR$/spring_data_mongodb/spring_data_mongodb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_data_transaction/spring_data_transaction.iml" filepath="$PROJECT_DIR$/spring_data_transaction/spring_data_transaction.iml" />
       <module fileurl="file://$PROJECT_DIR$/springmvcdemo/springmvcdemo.iml" filepath="$PROJECT_DIR$/springmvcdemo/springmvcdemo.iml" />
     </modules>
   </component>

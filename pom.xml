@@ -15,6 +15,7 @@
         <module>spring-data-elasticsearch-sample-application</module>
         <module>spring_data_mongodb</module>
         <module>spring_cache</module>
+        <module>spring_data_transaction</module>
     </modules>
 
 
